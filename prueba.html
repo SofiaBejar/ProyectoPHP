@@ -1,0 +1,73 @@
+<!--/**
+ * Proyecto 1º Trimestrte DWS
+ * curso 2024|25
+ * 
+ * @author Sofía Béjar
+ */-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gintonería</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img src="./assets/images/blackLogo.png" class="navbar-brand" style="width: 70px; height: auto;"/>
+            <img src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_1280.png" alt="Imagen de usuario" class="rounded-circle" style="width:40px; height:40px;"/>
+            <p style="color:white">SofiaBejar</p>
+            <form action="logout.php" method="post" class="ms-3">
+            <button type="submit" class="btn btn-primary">Agregar ginebra</button>
+            <button type="submit" class="btn btn-danger">Cerrar sesión</button>
+            </form>
+           
+        </div>
+    </nav>
+
+        <div class="container mt-4">
+            
+            
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <select class="form-select" id="tipoFilter">
+                        <option value="">Filtrar por Tipo</option>
+                      
+                            <option value="afrutada">Afrutada</option>
+                    
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-select" id="paisFilter">
+                        <option value="">Filtrar por País</option>
+                            <option value="España">España</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Cards de Ginebras -->
+            <div class="row" id="ginebrasContainer">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="https://www.topdrinks.es/pub/media/catalog/product/2/_/2_2431_4.jpg" class="card-img-top" alt="<?php echo htmlspecialchars($ginebra['nombre']); ?>">
+                            <div class="card-body">
+                                <h5 class="card-title">Hendricks</h5>
+                                <p class="card-text">Tipo: Herbácea</p>
+                                <p class="card-text">País: Escocia</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
