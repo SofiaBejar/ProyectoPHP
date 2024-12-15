@@ -13,7 +13,7 @@ session_start();
 if (!empty($_POST)):
 
     try {
-        $sqli = new mysqli("db", "root", "", "Gintoneria");
+        $sqli = new mysqli("localhost", "root", "", "Gintoneria");
         //echo "conectado";
     } catch (mysqli_sql_exception $excepcion) {
         die("ERROR de conexión con el motor de base de datos: {$excepcion->getMessage()}<br/>");

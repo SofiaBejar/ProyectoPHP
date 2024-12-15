@@ -49,7 +49,7 @@ $usuario = unserialize($_SESSION["_usuario"]);
             }
 
             // Ejemplo de base de datos para ginebras
-            $sqli = new mysqli("db", "root", "", "Gintoneria");
+            $sqli = new mysqli("localhost", "root", "", "Gintoneria");
             if ($sqli->connect_error) {
                 die("Conexión fallida: " . $sqli->connect_error);
             }
